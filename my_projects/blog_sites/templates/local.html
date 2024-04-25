@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World NEW</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun.uz</title>
+    <style>
+        .container{
+            width: 90%;
+            height: auto;
+            background-color: antiquewhite;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+
+        }
+        .navbar a{
+            text-decoration: none;
+            font-size: 27px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .maqola{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h2{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% include 'navbar.html' %}
+
+        <hr>
+        {% for l_new in l_news %}
+        <div class="maqola">
+            <h2>{{ l_new.title }}</h2>
+            <p>{{ l_new.description }}</p>
+            <h3>Author: {{ l_new.author }}</h3>
+            <p>Yaratilgan vaqti: {{ l_new.created_at }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+    
+</body>
+</html>

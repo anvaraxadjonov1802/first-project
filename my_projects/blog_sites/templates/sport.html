@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World NEW</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun.uz</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="">Home</a>
+            <a href="">World news</a>
+            <a href="">Local news</a>
+            <a href="">Sport news</a>
+        </div>
+        <hr>
+        {% for s_new in s_news %}
+        <div class="maqola">
+            <h2>{{ s_new.title }}</h2>
+            <p>{{ s_new.description }}</p>
+            <h3>Author: {{ s_new.author }}</h3>
+            <p>Yaratilgan vaqti: {{ s_new.created_at }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+    
+</body>
+</html>
