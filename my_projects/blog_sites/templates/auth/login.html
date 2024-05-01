@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun.uz</title>
+    <link rel="stylesheet" href="{% static 'css/styleauth.css' %}">
+    
+</head>
+<body>
+
+    <div class="box">
+        <div class="container">
+            <hr>
+            <h3>Login</h3>
+            <form method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <p><a href="">Forgot password?</a></p>
+                <button class="btn_send" type="submit">Login</button>
+                <p>Don't have an account? <a href="{% url 'register' %}">Signup</a></p>
+                <div class="bolish">
+                    <div class="line"></div>
+                    <p>Or</p>
+                    <div class="line"></div>
+
+                </div>
+                <button class="btn-with" type="button"> 
+                    <div class="btn_box">
+                        <img src="{% static 'imges/google (2).png' %}"> 
+                        <p>Login with Facebook</p>
+                    </div>
+                </button>
+                <button class="btn-with" type="button"> 
+                    <div class="btn_box">
+                        <img src="{% static 'imges/google (1).png' %}"> 
+                        <p>Login with Google</p>
+                    </div>
+                </button>
+                <br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+    
+</body>
+</html>

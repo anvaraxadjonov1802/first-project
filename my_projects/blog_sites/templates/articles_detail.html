@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun.uz</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="maqola">
+            <h2>{{ maqola.title }}</h2>
+            <p>{{ maqola.description }}</p>
+            <h3>Author: </h3>
+            <p>Yaratilgan vaqti: </p>
+            <hr>
+        </div>         
+    </div>
+</body>
+</html>

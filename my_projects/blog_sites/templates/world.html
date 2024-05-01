@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +14,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kun.uz</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
    
 </head>
 <body>
     <div class="container">
-        {% include 'navbar.html' %}
+        {% if request.user.is_authenticated%}
+        {% include 'login_navbar.html' %}
+
         <hr>
         {% for w_new in w_news %}
         <div class="maqola">
@@ -27,6 +32,21 @@
             <hr>
         </div>
         {% endfor %}
+        {% else %}
+        {% include 'navbar.html' %}
+
+        <hr>
+        {% for w_new in w_news %}
+        <div class="maqola">
+            <h2>{{ w_new.title }}</h2>
+            <p>{{ w_new.description }}</p>
+            <h3>Author: {{ w_new.author }}</h3>
+            <p>Yaratilgan vaqti: {{ w_new.created_at }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+        {% endif %}
+
     </div>
 </body>
 </html>
